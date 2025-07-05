@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Auth0 Example</title>
+  </head>
+  <body>
+    {% if session %}
+    <h1>Welcome {{session.userinfo.name}}!</h1>
+    {% if protected_message %}
+    <div style="background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin: 10px 0;">
+      <strong>{{protected_message}}</strong>
+    </div>
+    {% endif %}
+    <p><a href="/logout" id="qsLogoutBtn">Logout</a> | <a href="/protected" id="qsProtectedBtn">Access Protected Route</a></p>
+    <div><pre>{{pretty}}</pre></div>
+    {% else %}
+    <h1 id="profileDropDown">Welcome Guest</h1>
+    <p><a href="/login" id="qsLoginBtn">Login</a></p>
+    <p>Try to access the <a href="/protected">protected route</a> to see unauthorized access logging in action.</p>
+    {% endif %}
+  </body>
+</html>
