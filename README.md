@@ -226,7 +226,7 @@ app.logger.info(f"User logout - User ID: {user_id}, IP: {client_ip}")
 ### Primary Detection Query
 ```kusto
 AppServiceConsoleLogs
-| where TimeGenerated >= ago(75m)
+| where TimeGenerated >= ago(15m)
 | where ResultDescription has "Access to protected route"
 | extend user_id = extract("User ID: ([^,]+)", 1, ResultDescription)
 | where isnotempty(user_id)
@@ -247,9 +247,9 @@ AppServiceConsoleLogs
 
 #### 2. **Time Window Filter**
 ```kusto
-| where TimeGenerated >= ago(75m)
+| where TimeGenerated >= ago(15m)
 ```
-- Analyzes logs from the last 75 minutes
+- Analyzes logs from the last 15 minutes
 - Provides sufficient time window to detect patterns
 
 #### 3. **Route-Specific Filter**
