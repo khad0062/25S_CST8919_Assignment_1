@@ -3,7 +3,8 @@
 This assignment demonstrates a secure Flask web application with Auth0 authentication and comprehensive Azure security monitoring. The application includes logging, threat detection, and automated alerting for suspicious access patterns.
 
 ## Setup Instructions
-
+### Youtube Video
+(Youtube video Link)[https://youtu.be/6DtNzkEAFmw]
 ### 1. Auth0 Configuration
 
 #### Create Auth0 Application
