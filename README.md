@@ -220,14 +220,6 @@ app.logger.info(f"User logout - User ID: {user_id}, IP: {client_ip}")
 - **Detection**: KQL query aggregates access counts per user
 - **Response**: Automated alert with user details
 
-### Detection Algorithm
-```python
-def detect_suspicious_activity(user_id, time_window=15):
-    access_count = count_protected_access(user_id, time_window)
-    if access_count > 10:
-        return True
-    return False
-```
 
 ## KQL Query and Alert Logic
 
